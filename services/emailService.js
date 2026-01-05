@@ -10,7 +10,7 @@ class MailgunEmailService {
     this.apiKey = process.env.MAILGUN_API_KEY;
     this.domain = process.env.MAILGUN_DOMAIN;
     this.fromEmail = process.env.MAILGUN_FROM_EMAIL;
-    this.fromName = 'The Initiates E-rights';
+    this.fromName = 'Lasaco Assurance Plc E-rights';
     this.mailgun = new Mailgun(formData);
     this.client = null;
     
