@@ -55,3 +55,6 @@ reg_account_number	name	holdings	rights_issue	holdings after	amount_due	created_
 
 
 \copy shareholders(reg_account_number,name,holdings,rights_issue,holdings_after,amount_due,created_at,updated_at) FROM 'C:\Users\fadebowale\Desktop\APEL-WEBSITE\tip rights-issue_updated.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
+
+
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
