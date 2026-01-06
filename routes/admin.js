@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../config/database');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 // Get dashboard statistics
 router.post('/admin-signup',async (req,res)=>{
   try{
 const {email,password} = req.body
-const hashedPassword = await bcryptjs.hash(password,10);
+const hashedPassword = await bcrypt.hash(password,10);
 const createAdminUser = await pool.query('INSERT INTO admin_users (email,password) VALUES ($1,$2)', [email,hashedPassword]);
 
 return res.status(200).json({
@@ -37,7 +37,7 @@ if(adminUser.rows.length === 0){
   });
 }
 
-const validPassword = await bcryptjs.compare(password, adminUser.rows[0].password);
+const validPassword = await bcrypt.compare(password, adminUser.rows[0].password);
 
 if(!validPassword){
   return res.status(401).json({
