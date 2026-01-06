@@ -29,8 +29,8 @@ const corsOptions = {
     const allowedOrigins = [
       'http://localhost:3000', // React dev server
       'http://localhost:5000',
-      'https://tip.apel.com.ng',
-      'https://www.tip.apel.com.ng'
+      'https://lasaco.apel.com.ng',
+      'https://www.lasaco.apel.com.ng'
     ];
     
     // Check if the origin is in the allowed list or if it's a localhost origin
@@ -147,8 +147,8 @@ const startServer = async () => {
       console.log('CORS enabled for origins:', [
         'http://localhost:3000',
         'http://localhost:5000', 
-        'https://tip.apel.com.ng',
-        'https://www.tip.apel.com.ng'
+        'https://lasaco.apel.com.ng',
+        'https://www.lasaco.apel.com.ng'
       ]);
     });
   } catch (error) {
